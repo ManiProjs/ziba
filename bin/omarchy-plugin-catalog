@@ -4,8 +4,8 @@
 # omarchy:group=plugin
 # omarchy:hidden=true
 
-# The runtime registry uses the same root order and manifest validation.
-# Trusted namespaces are classified by the scan origin, never a path prefix.
+# Walks user plugins, the active checkout, then ordered XDG data roots and emits the first valid manifest per ID with computed paths and origin trust.
+# Bar selection and plugin commands consume this catalog instead of walking manifests independently.
 
 set -o pipefail
 
